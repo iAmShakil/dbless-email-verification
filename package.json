@@ -1,0 +1,89 @@
+{
+  "name": "dbless-email-verification",
+  "description": "Verify user email without using any database",
+  "version": "1.0.0",
+  "author": "Shakil <shakilofficial7@gmail.com> (https://shakil.me)",
+  "ava": {
+    "failFast": true,
+    "verbose": true,
+    "helpers": [
+      "test/helpers/**/*"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/iAmShakil/dbless-email-verification/issues",
+    "email": "shakilofficial7@gmail.com"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "contributors": [
+    "Shakil <shakilofficial7@gmail.com> (https://shakil.me)"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "ava": "latest",
+    "codecov": "latest",
+    "cross-env": "latest",
+    "eslint": "latest",
+    "eslint-config-xo-lass": "latest",
+    "fixpack": "latest",
+    "husky": "latest",
+    "lint-staged": "latest",
+    "nyc": "latest",
+    "remark-cli": "latest",
+    "remark-preset-github": "latest",
+    "xo": "latest"
+  },
+  "engines": {
+    "node": ">=8.3"
+  },
+  "homepage": "https://github.com/iAmShakil/dbless-email-verification",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "keywords": [
+    "cryptography",
+    "email-verification",
+    "verification"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "nyc": {
+    "check-coverage": true,
+    "functions": 100,
+    "reporter": [
+      "lcov",
+      "html",
+      "text"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "trailingComma": "none"
+  },
+  "remarkConfig": {
+    "plugins": [
+      "preset-github"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iAmShakil/dbless-email-verification"
+  },
+  "scripts": {
+    "ava": "cross-env NODE_ENV=test ava",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "nyc": "cross-env NODE_ENV=test nyc ava",
+    "test": "npm run ava",
+    "test-coverage": "npm run nyc"
+  }
+}
