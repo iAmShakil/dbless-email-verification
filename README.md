@@ -36,7 +36,8 @@ Generate a hash for the email id using the exported `generateVerificationHash` f
 | expiry  | false    | 5       | For how long the hash should remain valid in minutes. Expressed in minutes.|
 
 #### verifyHash 
-Pass the email and verification hash extracted from the url to the exported `verifyHash` function. The function returns `true` if the email is verified and `false` if not.
+Pass the email and verification hash extracted from the url to the exported `verifyHash` function. The function returns `true` if the email is verified and `false` if not.  
+
 | Argument      | Required | default | Description    | 
 | ------------- | -------- | ------- | -------------- |
 | hash          | true     | N/A     | Extracted hash from the url |
